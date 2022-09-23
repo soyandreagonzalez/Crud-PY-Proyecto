@@ -1,0 +1,14 @@
+{% extends "empleados/layout.html" %} 
+{% block content %} 
+    <form action="/store" method="POST">
+        <br><br><br>
+        <label for="">Nombre</label>&nbsp &nbsp &nbsp
+        <input type="text" name="txtNombre" id="txtNombre"><br>
+        <label for="">Correo</label>&nbsp &nbsp &nbsp &nbsp 
+        <input type="text" name="txtCorreo" id="txtCorreo"><br>
+        <label for="">Dirección</label>&nbsp &nbsp
+        <input type="text" name="txtDireccion" id="txtDireccion"><br><br>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        <input type="submit" name="Agregar">
+    </form>
+    {%  endblock  %}

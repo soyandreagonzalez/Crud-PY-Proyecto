@@ -1,0 +1,21 @@
+{% extends "empleados/layout.html" %} 
+{% block content %} 
+
+{% for empleado in empleados%}
+
+<form action="/update" method="POST" enctype="multipar/form-data">
+    <br><br><br>
+    <label for="">Código</label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[0] }}" name="txtId" id="txtId"><br>
+    <label for="">Nombre</label>&nbsp &nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[1] }}" name="txtNombre" id="txtNombre"><br>
+    <label for="">Correo</label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[2] }}" name="txtCorreo" id="txtCorreo"><br>
+    <label for="">Dirección</label>&nbsp &nbsp &nbsp &nbsp 
+    <input type="text" value="{{ empleado[3] }}" name="txtDireccion" id="txtDireccion"><br><br>
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <input type="submit" name="Editar">
+</form>
+{% endfor %}
+
+{%  endblock  %}
